@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.13.0",
+    "ava": "^4.3.1",
     "ava-wrangler-fixture": "file:../"
   }
 }

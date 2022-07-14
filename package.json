@@ -1,9 +1,9 @@
 {
   "name": "ava-wrangler-fixture",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsup src"
+    "build": "tsup --dts --sourcemap=inline src"
   },
   "devDependencies": {
     "@types/node": "^18.0.4",
