@@ -8,14 +8,15 @@ import child_process from "child_process"
 import chalk from "chalk"
 import getPort from "get-port"
 import defaultAxios from "axios"
+import { ExecutionContext } from "ava"
 
-export const getTestServer = async (t: any) => {
+export const getTestServer = async (t: ExecutionContext) => {
   // axiosMonkeypatch()
   const port = await getPort()
 
   const proc = child_process.spawn(
     `npx`,
-    ["wrangler", "dev", "-l", "--port", port, "./src/index.ts"],
+    ["wrangler", "dev", "-l", "--port", port.toString(), "./src/index.ts"],
     {
       shell: true,
     }
