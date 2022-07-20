@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "axios-error-monkeypatch": "^1.0.0",
     "get-port": "5"
   },
   "repository": "https://github.com/seamapi/ava-wrangler-fixture"

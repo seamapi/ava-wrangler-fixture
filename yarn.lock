@@ -519,6 +519,15 @@ ava@^4.3.1:
     write-file-atomic "^4.0.1"
     yargs "^17.5.1"
 
+axios-error-monkeypatch@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/axios-error-monkeypatch/-/axios-error-monkeypatch-1.0.0.tgz#8841553788a25cdc835353a9ab1e17cda8edfa35"
+  integrity sha512-pLj2RKeSuE0Z2a89H8vI9LV1OA7yK8Dle6mPD5hqum3WoRC48YnabeNTsW6OhS/ingLmtyMpknSexpa//oD3Dg==
+  dependencies:
+    chalk "^5.0.1"
+    concordance "^5.0.4"
+    lodash "^4.17.21"
+
 axios@^0.27.2:
   version "0.27.2"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.27.2.tgz#207658cc8621606e586c85db4b41a750e756d972"
@@ -2161,7 +2170,7 @@ lodash.sortby@^4.7.0:
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
   integrity sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==
 
-lodash@^4.17.15, lodash@^4.17.4:
+lodash@^4.17.15, lodash@^4.17.21, lodash@^4.17.4:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==

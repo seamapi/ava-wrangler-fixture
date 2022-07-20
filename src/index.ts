@@ -9,9 +9,10 @@ import chalk from "chalk"
 import getPort from "get-port"
 import defaultAxios from "axios"
 import { ExecutionContext } from "ava"
+import axiosMonkeypatch from "axios-error-monkeypatch"
 
 export const getTestServer = async (t: ExecutionContext) => {
-  // axiosMonkeypatch()
+  axiosMonkeypatch()
   const port = await getPort()
 
   const proc = child_process.spawn(
