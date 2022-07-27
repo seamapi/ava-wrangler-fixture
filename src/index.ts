@@ -11,9 +11,17 @@ import defaultAxios from "axios"
 import { ExecutionContext } from "ava"
 import axiosMonkeypatch from "axios-error-monkeypatch"
 
-export const getTestServer = async (t: ExecutionContext) => {
+interface Options {
+  silent: boolean
+}
+
+export const getTestServer = async (
+  t: ExecutionContext,
+  options: Options = { silent: false }
+) => {
   axiosMonkeypatch()
   const port = await getPort()
+  const { silent } = options
 
   const proc = child_process.spawn(
     `npx`,
@@ -26,7 +34,9 @@ export const getTestServer = async (t: ExecutionContext) => {
   let isClosed = false,
     hasStarted = false
   proc.stdout.on("data", (data: any) => {
-    console.log(chalk.yellow(data.toString()))
+    if (!silent) {
+      console.log(chalk.yellow(data.toString()))
+    }
     if (data.toString().includes("Listening on localhost")) {
       console.log("has started")
       hasStarted = true
@@ -34,7 +44,9 @@ export const getTestServer = async (t: ExecutionContext) => {
   })
 
   proc.stderr.on("data", (data: any) => {
-    console.log(chalk.red(data.toString()))
+    if (!silent) {
+      console.log(chalk.red(data.toString()))
+    }
   })
 
   proc.on("close", (code: any) => {
