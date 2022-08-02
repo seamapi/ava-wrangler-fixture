@@ -73,6 +73,7 @@ export const getTestServer = async (
   return {
     serverUrl,
     axios,
+    port,
   }
 }
 
