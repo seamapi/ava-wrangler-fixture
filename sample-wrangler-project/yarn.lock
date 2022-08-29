@@ -286,15 +286,10 @@ asynckit@^0.4.0:
   integrity sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==
 
 "ava-wrangler-fixture@file:..":
-  version "0.0.0"
+  version "1.1.2"
   dependencies:
     axios "^0.27.2"
-    get-port "5"
-
-"ava-wrangler-fixture@file:../":
-  version "0.0.0"
-  dependencies:
-    axios "^0.27.2"
+    axios-error-monkeypatch "^1.0.1"
     get-port "5"
 
 ava@^4.3.1:
@@ -347,6 +342,15 @@ ava@^4.3.1:
     temp-dir "^2.0.0"
     write-file-atomic "^4.0.1"
     yargs "^17.5.1"
+
+axios-error-monkeypatch@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/axios-error-monkeypatch/-/axios-error-monkeypatch-1.0.1.tgz#3b144c746890e6436c62b6639378d62a29076a12"
+  integrity sha512-XQ2bnOnGQTDaEPwDhjLvcGMfZcYOZ7KaOKvt7zykS4nNju6h3l7wqUsnPHi9ZXyHj7ZNMZ8n0DBJW0tS4Fy/ew==
+  dependencies:
+    chalk "^5.0.1"
+    concordance "^5.0.4"
+    lodash "^4.17.21"
 
 axios@^0.27.2:
   version "0.27.2"
@@ -1056,7 +1060,7 @@ locate-path@^7.1.0:
   dependencies:
     p-locate "^6.0.0"
 
-lodash@^4.17.15:
+lodash@^4.17.15, lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==

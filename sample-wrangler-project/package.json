@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "wrangler dev -l"
+    "dev": "wrangler dev -l",
+    "test": "ava"
   },
   "dependencies": {
     "wrangler": "^2.0.15"
