@@ -25,7 +25,16 @@ export const getTestServer = async (
 
   const proc = child_process.spawn(
     `npx`,
-    ["wrangler", "dev", "-l", "--port", port.toString(), "./src/index.ts"],
+    [
+      "wrangler",
+      "dev",
+      "-l",
+      "--port",
+      port.toString(),
+      "--inspect",
+      "false",
+      "./src/index.ts",
+    ],
     {
       shell: true,
     }

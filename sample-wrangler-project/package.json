@@ -7,7 +7,7 @@
     "test": "ava"
   },
   "dependencies": {
-    "wrangler": "^2.0.15"
+    "wrangler": "^2.0.28"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.13.0",
