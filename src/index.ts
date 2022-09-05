@@ -46,7 +46,7 @@ export const getTestServer = async (
     if (!silent) {
       console.log(chalk.yellow(data.toString()))
     }
-    if (data.toString().includes("Listening on localhost")) {
+    if (data.toString().includes("Listening on")) {
       console.log("has started")
       hasStarted = true
     }
@@ -69,7 +69,7 @@ export const getTestServer = async (
     }
   })
 
-  const serverUrl = `http://localhost:${port}`
+  const serverUrl = `http://127.0.0.1:${port}`
 
   const axios = defaultAxios.create({
     baseURL: serverUrl,
